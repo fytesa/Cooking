@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
+
+    <!-- Поле поиска -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="@android:color/white">
+
+        <EditText
+            android:id="@+id/searchField"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Поиск рецепта"
+            android:drawableStart="@android:drawable/ic_menu_search"
+            android:background="@android:drawable/edit_text"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+    </LinearLayout>
+
+    <!-- Список постов -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Пост 1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="8dp" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:text="Кулинар89"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="2 часа назад"
+                        android:textSize="12sp"
+                        android:textColor="#888888"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="Попробовал приготовить лазанью по новому рецепту у @ГордонРамзи, получилась пушка"
+                        android:layout_marginTop="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_marginTop="6dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:src="@android:drawable/btn_star_big_off"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginEnd="4dp" />
+                        <TextView
+                            android:text="4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <ImageView
+                            android:src="@android:drawable/ic_menu_info_details"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="4dp" />
+                        <TextView
+                            android:text="10 комментариев"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:src="@android:drawable/ic_menu_more"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp" />
+            </LinearLayout>
+            <!-- Пост 1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="8dp" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:text="Повар от бога"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="2 часа назад"
+                        android:textSize="12sp"
+                        android:textColor="#888888"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="Какие яблоки лучше использовать для шарлотки?"
+                        android:layout_marginTop="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_marginTop="6dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:src="@android:drawable/btn_star_big_off"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginEnd="4dp" />
+                        <TextView
+                            android:text="0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <ImageView
+                            android:src="@android:drawable/ic_menu_info_details"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="4dp" />
+                        <TextView
+                            android:text="0 комментариев"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:src="@android:drawable/ic_menu_more"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp" />
+            </LinearLayout>
+
+            <!-- Пост 2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="8dp" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:text="Люблю борщ"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="2 часа назад"
+                        android:textSize="12sp"
+                        android:textColor="#888888"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="Кто-нибудь может посоветовать быстрый легкий рецепт по приготовлению пирога?"
+                        android:layout_marginTop="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_marginTop="6dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:src="@android:drawable/btn_star_big_off"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginEnd="4dp" />
+                        <TextView
+                            android:text="6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <ImageView
+                            android:src="@android:drawable/ic_menu_info_details"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="4dp" />
+                        <TextView
+                            android:text="18 комментариев"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+
+                <ImageView
+                    android:src="@android:drawable/ic_menu_more"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Нижнее меню -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="#E6EAFE"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_mapmode" />
+            <TextView
+                android:text="Карта"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_width="16dp"
+                android:layout_height="24dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:src="@android:drawable/ic_menu_agenda"
+                android:layout_width="24dp"
+                android:layout_height="24dp" />
+
+            <TextView
+                android:text="База рецептов"
+                android:textSize="12sp"
+                android:textColor="#8888ff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:src="@android:drawable/ic_menu_myplaces"
+                android:layout_width="24dp"
+                android:layout_height="24dp" />
+            <TextView
+                android:text="Профиль"
+                android:textSize="12sp"
+                android:layout_width="16dp"
+                android:layout_height="24dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

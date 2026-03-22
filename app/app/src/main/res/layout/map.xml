@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F7"
+    tools:context=".MapActivity">
+
+    <!-- Заголовок -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Карта магазинов и ресторанов"
+        android:textSize="18sp"
+        android:textColor="#888888"
+        android:padding="16dp"
+        android:gravity="center_horizontal" />
+
+    <!-- Поле поиска -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/searchField"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@android:drawable/edit_text"
+            android:drawableStart="@android:drawable/ic_menu_search"
+            android:hint="Поиск"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp" />
+    </LinearLayout>
+
+    <!-- Карта с меткой и погодой -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="16dp">
+
+        <!-- Метка "У дома" -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_1"
+            android:contentDescription="Фоновое изображение карты" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/label_background_black"
+            android:text="У дома"
+            android:textColor="#000000"
+            android:padding="6dp"
+            android:textSize="14sp"
+            android:elevation="4dp" />
+
+        <!-- Погода -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/weather_background"
+            android:drawableStart="@drawable/ic_weather"
+            android:padding="6dp"
+            android:text="+25°C"
+            android:textColor="#3B82F6"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <!-- Карточка магазина -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:elevation="2dp"
+        android:layout_margin="16dp"
+        android:padding="12dp"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="@android:color/white">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/shop_placeholder"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/img"
+            android:contentDescription="Фото магазина" />
+
+        <TextView
+            android:text="У дома"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@android:drawable/btn_star_big_on"
+                android:layout_marginEnd="4dp"
+                android:contentDescription="Рейтинг" />
+            <TextView
+                android:text="4.8"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@android:drawable/ic_menu_mylocation"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="4dp"
+                android:contentDescription="Расстояние до магазина" />
+            <TextView
+                android:text="1.2 км"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Нижняя навигация -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="#E6EAFE"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:src="@android:drawable/ic_menu_mapmode"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="Карта" />
+            <TextView
+                android:text="Карта"
+                android:textSize="12sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:src="@android:drawable/ic_menu_agenda"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="База рецептов" />
+            <TextView
+                android:text="База рецептов"
+                android:textSize="12sp"
+                android:textColor="#8888ff" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:src="@android:drawable/ic_menu_myplaces"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="Профиль" />
+            <TextView
+                android:text="Профиль"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
